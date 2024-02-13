@@ -7,7 +7,9 @@
 Никаких особых, нужен софт:
 
 * [Git](https://git-scm.com/)
-* Любой дистрибутив/пакет LaTeX с поддержкой XeLaTeX для Вашей ОС, например, [TeXLive](https://www.tug.org/texlive/)
+* Любой дистрибутив/пакет LaTeX с поддержкой XeLaTeX для Вашей ОС, например:
+  * [Tectonic](https://tectonic-typesetting.github.io/) — интерфейс командной строки для XeLaTeX, самостоятельно скачивающий нужные инструменты и компоненты
+  * [TeXLive](https://www.tug.org/texlive/) — популярный кроссплатформенный дистрибутив
 * [Интерпретатор Ruby](https://www.ruby-lang.org/)
 * [PDFtk Server](https://en.wikipedia.org/wiki/PDFtk)
 
