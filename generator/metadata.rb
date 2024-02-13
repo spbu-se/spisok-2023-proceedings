@@ -62,7 +62,8 @@ end
 class Proceedings
   attr_reader :title, :sections, :content_start_page
 
-  def initialize(sectionsfolder)
+  def initialize
+    sectionsfolder = OPTIONS[:sections]
     procmeta = YAML::load_file(File::join(sectionsfolder, 'proceedings.yml'))
     @sectionsfolder = sectionsfolder
     @title = procmeta['title']

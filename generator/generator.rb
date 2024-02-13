@@ -51,8 +51,8 @@ class Section
 
       f.write <<~COMPILE
         #{hashbang}
-        xelatex _section-overlay.tex
-        xelatex _section-overlay.tex
+        #{OPTIONS[:texlauncher]} _section-overlay.tex
+        #{OPTIONS[:texlauncher]} _section-overlay.tex
 
         pdftk #{pdfs.join ' '} cat output _section-articles.pdf
         pdftk _section-overlay.pdf multibackground _section-articles.pdf output #{@pdfname}

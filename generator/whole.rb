@@ -20,8 +20,8 @@ def gen_whole(sections)
     end
 
     f.puts <<~TOC
-      xelatex _toc.tex
-      xelatex _toc.tex
+      #{OPTIONS[:texlauncher]} _toc.tex
+      #{OPTIONS[:texlauncher]} _toc.tex
 
       #{scall} __concat_proceedings.#{suffix}
       TOC
