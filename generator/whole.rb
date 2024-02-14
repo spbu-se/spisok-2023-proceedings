@@ -20,7 +20,7 @@ def gen_whole(sections)
     end
 
     f.puts <<~TOC
-      #{OPTIONS[:texlauncher]} _toc.tex
+      #{OPTIONS[:texlauncher] == 'tectonic' ? '# ' : ''}#{OPTIONS[:texlauncher]} _toc.tex
       #{OPTIONS[:texlauncher]} _toc.tex
 
       #{scall} __concat_proceedings.#{suffix}
