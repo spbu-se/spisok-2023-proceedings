@@ -2,19 +2,35 @@
 
 \usepackage{mathspec}
 \usepackage{fontspec}
+\usepackage{xecyr}
+
 \defaultfontfeatures{Mapping=tex-text,Ligatures={TeX},Kerning=On}
 
-\def\MyTimesFont#1{\expandafter#1[]{Times New Roman}}
-\def\MyCourierFont#1{\expandafter#1[]{Courier New}}
-\def\MyArialFont#1{\expandafter#1{Arial}}
+\def\MyRomanFont#1{\expandafter#1{Tempora}[
+  Mapping=tex-text,
+  Extension=.otf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+]}
+\def\MyMonoFont#1{\expandafter#1[]{Courier New}}
+\def\MySerifFont#1{\expandafter#1{CMUSansSerif}[
+  Mapping=tex-text,
+  Extension=.otf,
+  UprightFont=cmunss,
+  ItalicFont=cmunsi,
+  BoldFont=cmunsx,
+  BoldItalicFont=cmunbi,
+]}
 
-\MyTimesFont{\setmainfont}
-\MyTimesFont{\setromanfont}
-\MyTimesFont{\newfontfamily{\cyrillicfont}}
-\MyCourierFont{\setmonofont}
-\MyCourierFont{\newfontfamily{\cyrillicfonttt}}
-\MyArialFont{\setsansfont}
-\MyArialFont{\newfontfamily{\cyrillicfontsf}}
+\MyRomanFont{\setmainfont}
+\MyRomanFont{\setromanfont}
+\MyRomanFont{\newfontfamily{\cyrillicfont}}
+\MyMonoFont{\setmonofont}
+\MyMonoFont{\newfontfamily{\cyrillicfonttt}}
+\MySerifFont{\setsansfont}
+\MySerifFont{\newfontfamily{\cyrillicfontsf}}
 
 \usepackage{polyglossia}
 \setdefaultlanguage{russian}
